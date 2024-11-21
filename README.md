@@ -8,7 +8,7 @@
 
 <div align="center">
   <h3>
-    <a href="{https://your-demo-link.your-domain}">
+    <a href="https://your-demo-link.your-domain](https://codebyev.github.io/alarado/">
       Demo
     </a>
     <span> | </span>
