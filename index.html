@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      href="resources/favicon.ico"
+      type="image/x-icon"
+      sizes="96x96"
+    />
+
+    <title>Simple Homepage - Alarado | devChallenges.io</title>
+
+
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+  <body>
+
+    <!--navbar-->
+
+    <div class="navbar">
+      <div class="logo">
+        <div class="logo-img"></div>
+        <h1>Alarado</h1>
+      </div>
+
+      <nav>
+        <ul class="sidebar">
+          <li onclick="hideSidebar()"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="7.16113" y="23.2176" width="22" height="3" rx="1.5" transform="rotate(-45 7.16113 23.2176)"/>
+              <rect x="9.28223" y="7.66116" width="22" height="3" rx="1.5" transform="rotate(45 9.28223 7.66116)"/>
+              </svg></li>
+          <li class="about"><a href="#">About Us</a></li>
+          <li><a href="#">Product</a></li>
+          <li><a href="#">Resource</a></li>
+          <li><a href="#">Contact</a></li>
+          <button class="theme-switch side-switch" >
+            <div>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15 4C15.292 4 15.438 4 15.5781 4.04183C16.192 4.22522 16.4775 4.93111 16.1637 5.48976C16.0921 5.61719 15.8744 5.82779 15.4389 6.249C13.935 7.70352 13 9.74257 13 12C13 14.2574 13.935 16.2965 15.4389 17.751C15.8744 18.1722 16.0921 18.3828 16.1637 18.5102C16.4775 19.0689 16.192 19.7748 15.5781 19.9582C15.438 20 15.292 20 15 20V20C10.5817 20 7 16.4183 7 12C7 7.58172 10.5817 4 15 4V4Z"/>
+                </svg>
+            </div>
+    
+            <div>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="4" />
+                <path d="M12 5V3"  stroke-width="2" stroke-linecap="round"/>
+                <path d="M12 21V19"  stroke-width="2" stroke-linecap="round"/>
+                <path d="M16.95 7.04996L18.3643 5.63574" stroke-width="2" stroke-linecap="round"/>
+                <path d="M5.63608 18.3644L7.05029 16.9502"  stroke-width="2" stroke-linecap="round"/>
+                <path d="M19 12L21 12"  stroke-width="2" stroke-linecap="round"/>
+                <path d="M3 12L5 12" stroke-width="2" stroke-linecap="round"/>
+                <path d="M16.95 16.95L18.3643 18.3643" stroke-width="2" stroke-linecap="round"/>
+                <path d="M5.63608 5.63559L7.05029 7.0498" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+          </button> 
+        </ul>
+      
+        
+
+        <ul>
+          <li class="about hideOnMobile"><a href="#">About Us</a></li>
+          <li class="hideOnMobile"><a href="#">Product</a></li>
+          <li class="hideOnMobile"><a href="#">Resource</a></li>
+          <li class="hideOnMobile"><a href="#">Contact</a></li>
+          <li class="menu-button" onclick="showSidebar()"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="5" y="8" width="22" height="3" rx="1.5"/>
+            <rect x="5" y="15" width="22" height="3" rx="1.5"/>
+            <rect x="5" y="22" width="22" height="3" rx="1.5"/>
+            </svg>
+            </li>
+        </ul>
+      </nav>
+      
+      <div class="hideOnMobile">
+      <button class="theme-switch switch" >
+        <div>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M15 4C15.292 4 15.438 4 15.5781 4.04183C16.192 4.22522 16.4775 4.93111 16.1637 5.48976C16.0921 5.61719 15.8744 5.82779 15.4389 6.249C13.935 7.70352 13 9.74257 13 12C13 14.2574 13.935 16.2965 15.4389 17.751C15.8744 18.1722 16.0921 18.3828 16.1637 18.5102C16.4775 19.0689 16.192 19.7748 15.5781 19.9582C15.438 20 15.292 20 15 20V20C10.5817 20 7 16.4183 7 12C7 7.58172 10.5817 4 15 4V4Z"/>
+            </svg>
+        </div>
+
+        <div>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 5V3"  stroke-width="2" stroke-linecap="round"/>
+            <path d="M12 21V19"  stroke-width="2" stroke-linecap="round"/>
+            <path d="M16.95 7.04996L18.3643 5.63574" stroke-width="2" stroke-linecap="round"/>
+            <path d="M5.63608 18.3644L7.05029 16.9502"  stroke-width="2" stroke-linecap="round"/>
+            <path d="M19 12L21 12"  stroke-width="2" stroke-linecap="round"/>
+            <path d="M3 12L5 12" stroke-width="2" stroke-linecap="round"/>
+            <path d="M16.95 16.95L18.3643 18.3643" stroke-width="2" stroke-linecap="round"/>
+            <path d="M5.63608 5.63559L7.05029 7.0498" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </div>
+      </button> 
+      </div>
+    </div>
+    <!--header-->
+
+    <header>
+
+      <div class="content">
+        <p>😎 Simple way to communicate</p>
+        <h1>Actions for <br> Accessibility <br> in Design</h1>
+        <p class="second">The fastest way to build and deploy websites with resusable components.</p>
+        <div class="buttons">
+          <button class="get-started">get started</button>
+          <button class="get-demo">get live demo</button>
+        </div>
+        <div class="plus">
+          <div class="no-credit">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 21C16.9706 21 21 16.9706 21 12C21 10.1666 20.4518 8.46124 19.5103 7.03891L12.355 14.9893C11.6624 15.7589 10.4968 15.8726 9.66844 15.2513L6.4 12.8C5.95817 12.4686 5.86863 11.8418 6.2 11.4C6.53137 10.9582 7.15817 10.8686 7.6 11.2L10.8684 13.6513L18.214 5.48955C16.5986 3.94717 14.4099 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" fill="#4CA154"/>
+            </svg>
+            <p> No credit card required</p>
+          </div>
+
+          <div class="no-software">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 21C16.9706 21 21 16.9706 21 12C21 10.1666 20.4518 8.46124 19.5103 7.03891L12.355 14.9893C11.6624 15.7589 10.4968 15.8726 9.66844 15.2513L6.4 12.8C5.95817 12.4686 5.86863 11.8418 6.2 11.4C6.53137 10.9582 7.15817 10.8686 7.6 11.2L10.8684 13.6513L18.214 5.48955C16.5986 3.94717 14.4099 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" fill="#4CA154"/>
+              </svg>
+            <p> No software to install</p>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="image">
+        <img src="./resources/hero-image-simple-homepage.png" alt="Human with computer header">
+      </div>
+
+    </header>
+
+    <!--author-->
+    <div class="author-info">
+      Coded by <a href="https://github.com/CodeByEv">EjvΔ</a> | Challenge by
+      <a href="https://www.devchallenges.io?ref=challenge" target="_blank"
+        >devChallenges.io</a
+      >.
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

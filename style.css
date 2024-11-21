@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --green: #4CA154;
+  --blue: #2A4DD0;
+  --sidebar-bg: #ffffff;
+  --link-color: #2A4DD0;
+  --text-color: #223344;
+  --second-text: #909193;
+  --background: #F2F9FE;
+}
+
+.darkmode {
+  --green: #4CA154;
+  --blue: #2A4DD0;
+  --sidebar-bg: #141c32;
+  --link-color: #fff;
+  --text-color: #fff;
+  --second-text: #909193;
+  --background: #111729;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
+  color: var(--text-color);
+}
+html {
+  font-size: 90%;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--background);
+}
+
+/* Navbar */
+.navbar {
+  width: 90%;
+  height: 3rem;
+  margin: 1.5rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.logo-img {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: var(--green);
+  border-radius: 15%;
+  transform: rotate(45deg);
+  position: relative;
+  top: 0;
+  right: -1rem;
+}
+
+.logo-img:before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: var(--blue);
+  border-radius: 15%;
+  transform: rotate(90deg);
+  position: absolute;
+  left: -.5rem;
+  top: .5rem;
+}
+
+.logo h1 {
+  font-weight: 800;
+  color: var(--dark);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li {
+  list-style: none;
+  padding: 0 1.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+nav svg {
+  fill: var(--dark);
+}
+
+.about a{
+  color: var(--link-color);
+  position: relative;
+}
+
+.about a:after {
+  content: "";
+  width: 100%;
+  height: .18rem;
+  background-color: var(--link-color);
+  position: absolute;
+  bottom: -0.2rem;
+  left: 0;
+}
+/* sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 65%;
+  z-index: 100;
+  background-color: var(--sidebar-bg);
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.sidebar li svg {
+  float: right;
+  margin-right: 1.3rem;
+  margin-top: 1.5rem;
+}
+
+.sidebar li{
+  width: 100%;
+  padding: 0;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.sidebar a{
+  width: 100%;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.sidebar li:not(.about) a{
+  color: var(--second-text);
+}
+
+.menu-button {
+  display: none;
+}
+
+nav ul li svg {
+  fill: var(--text-color);
+}
+
+/* Header */
+header {
+  width: 90%;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content {
+  margin: 2rem 0;
+  max-width: 40%;
+}
+
+.content > p {
+ font-weight: 600;
+ font-size: 1.1rem;
+ margin-bottom: 1.3rem;
+}
+
+.content > p:first-child {
+  text-transform: uppercase;
+  font-size: .9rem;
+}
+
+.content p.second {
+  color: var(--second-text);
+}
+
+.content h1 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+button {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+button.get-started {
+  background-color: var(--blue);
+  color: white;
+  text-transform: uppercase;
+  border-radius: .8rem;
+  border: none;
+  padding: .7rem 1.5rem;
+  margin-right: 2rem;
+}
+
+button.get-demo {
+  background-color: transparent;
+  border: none;
+  text-transform: capitalize;
+  color: var(--link-color);
+  font-weight: 600;
+  position: relative;
+  font-weight: 600;
+}
+
+button.get-demo::after {
+  content: "";
+  width: 100%;
+  height: .15rem;
+  background-color: var(--link-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.content .plus {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 2rem;
+  font-size: .9rem;
+  font-weight: 500;
+  gap: 1.3rem;
+}
+
+.content .plus div {
+  display: flex;
+}
+
+.content .plus svg {
+  margin-right: .5rem;
+}
+
+.content .plus p:first-child {
+  margin-right: 5rem;
+}
+.image {
+  max-width: 60%;
+}
+
+.image img {
+  max-width: 90%;
+  float: right;
+}
+
+/* author */
+
+.author-info {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 16px;
+  color: var(--text-color);
+}
+
+.author-info a {
+  text-decoration: none;
+}
+
+/* theme switch */
+.theme-switch {
+  width: 4rem;
+  height: 2rem;
+  padding: 0;
+  border-radius: 25px;
+  background-color: #223344;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+}
+
+.theme-switch div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.theme-switch div svg {
+  fill: white;
+  width: 85%;
+}
+
+.theme-switch div:last-child {
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: white;
+  border-radius: 50%;
+  margin-right: 0.25rem;
+}
+.darkmode .theme-switch {
+  background-color: #223344;
+}
+
+.darkmode .theme-switch div:first-child {
+  display: flex;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.darkmode .theme-switch div:last-child {
+  display: flex;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  justify-items: flex-end;
+  background-color: transparent;
+}
+
+.darkmode .theme-switch div:last-child svg {
+  fill: white;
+  stroke: white;
+}
+
+.theme-switch div:last-child svg {
+  fill: #223344;
+  stroke: #223344;
+}
+
+.darkmode .theme-switch div svg {
+  fill: #223344;
+}
+
+.theme-switch div:first-child {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-left: 0.25rem;
+}
+
+/* media query*/
+@media(max-width: 950px) {
+  .image {
+    max-width: 50%;
+  }
+
+  .content {
+    max-width: 50%;
+  }
+}
+
+@media(max-width:843px) {
+
+  .hideOnMobile {
+    display: none;
+  }
+
+
+  .menu-button {
+    display: block;
+  }
+
+  nav {
+    margin-right: -2rem;
+  }
+
+  header {
+    flex-direction: column-reverse;
+  }
+ 
+  .content {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .content .buttons {
+    margin: 2rem 0;
+  }
+
+  .image {
+    max-width: 90%;
+  }
+  
+  .image img {
+    max-width: 85%;
+    float: none;
+  }
+
+
+}
